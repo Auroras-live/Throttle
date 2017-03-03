@@ -17,7 +17,7 @@ $canPost = true;
 throttle(array(
 	'id'        	=> 'submit-comment',
 	'timeout'   	=> 60,	// Throttle user for 60 seconds
-	'passes'    	=> 3,	// if they attemps this action MORE than 3 times
+	'passes'    	=> 3,	// if they attempt this action MORE than 3 times
 	'interval'  	=> 15,	// within 15 seconds
 	'throttled' 	=> function($seconds){ // They've been throttled
 		$canPost = false;
@@ -26,7 +26,7 @@ throttle(array(
 ));
 
 if(!$canPost){
-	echo "Hey, you're posting to quickly. Try again in $timeLeft seconds.";
+	echo "Hey, you're posting too quickly. Try again in $timeLeft seconds.";
 } else {
 	// Post Comment
 }
@@ -42,12 +42,12 @@ session_start();
 throttle(array(
 	'id'        	=> 'submit-comment',
 	'timeout'   	=> 60,	// Throttle user for 60 seconds
-	'passes'    	=> 3,	// if they attemps this action MORE than 3 times
+	'passes'    	=> 3,	// if they attempt this action MORE than 3 times
 	'interval'  	=> 15,	// within 15 seconds
 	'throttled' 	=> function($seconds){ // They've been throttled
 		echo json_encode(array(
 			'success' => false,
-			'reason' => "Hey, you're posting to quickly. Try again in $seconds seconds."
+			'reason' => "Hey, you're posting too quickly. Try again in $seconds seconds."
 		)); die();
 	}
 ));
