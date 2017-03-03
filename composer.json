@@ -1,0 +1,17 @@
+{
+    "name": "jakiestfu/throttle",
+    "description": "A PHP function that can be used to throttle any actions you want, as to prevent flooding",
+    "type": "library",
+    "keywords": ["throttle", "rate limiting"],
+    "homepage": "http://github.com/jakiestfu/Throttle",
+    "license": "MIT",
+    "authors": [{
+        "name": "Jake Kelley",
+        "email": "jakie8@gmail.com",
+        "homepage": "http://jakiestfu.com",
+        "role": "Developer"
+    }],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
